@@ -6,4 +6,5 @@ class AppImages {
   static const String imageCollection = "assets/images/imageCollection.png";
   static const String iconCost = "assets/images/icon_cost.png";
   static const String iconText = "assets/images/icon_text.png";
+  static const String imageArtist = "assets/images/image_artist.png";
 }

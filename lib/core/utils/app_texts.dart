@@ -13,6 +13,10 @@ class AppTexts {
   static const String time = "1h 23m 32s";
   static const String money = "2.23 ETH";
   static const String btc = "BTC";
+  static const String follow = "Follow";
+  static const String darleneRobertson = "Darlene Robertson";
+  static const String followers = "125k Followers";
+  static const String bestArtist = "Best Artist";
   static const String placeBid = "Place Bid";
   static const String hypebestApesG = "Hypebest Apes G";
   static const String highestBidToday = "Highest Bid Today";
