@@ -11,8 +11,8 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      textModel.title!,
-      textAlign: TextAlign.center,
+      textModel.title,
+      textAlign: textModel.textAlign ?? TextAlign.center,
       style: GoogleFonts.spaceGrotesk(
         fontWeight: textModel.fontWeight,
         fontSize: textModel.fontSize,

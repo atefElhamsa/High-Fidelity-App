@@ -1,7 +1,21 @@
 class AppTexts {
   static const String discoverCollect = "Discover, Collect";
   static const String andSell = "and Sell ";
+  static const String sellingThe = "Selling the";
+  static const String mostPopular = " most popular";
+  static const String onlyHere = "NFT is only here";
   static const String nfts = " NFTs";
   static const String skip = "Skip";
+  static const String trending = "Trending";
+  static const String byArtist = "By Artist";
+  static const String etc = "ETH";
+  static const String endsIn = "Ends in";
+  static const String time = "1h 23m 32s";
+  static const String money = "2.23 ETH";
+  static const String btc = "BTC";
+  static const String placeBid = "Place Bid";
+  static const String hypebestApesG = "Hypebest Apes G";
+  static const String highestBidToday = "Highest Bid Today";
+  static const String topCollection = "Top Collection 🔥";
   static const String descOnboarding = "A vibrant marketplace where creators showcase their unique NFTs.";
 }
