@@ -17,6 +17,7 @@ class HomeBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
           const TopTextWidget(),
           SizedBox(height: 25.h),
@@ -38,7 +39,7 @@ class HomeBody extends StatelessWidget {
             ),
           ),
           SizedBox(height: 15.h),
-          const Expanded(child: ListTileWidgetListView()),
+          const ListTileWidgetListView(),
         ],
       ),
     );
