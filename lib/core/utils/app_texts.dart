@@ -14,6 +14,10 @@ class AppTexts {
   static const String money = "2.23 ETH";
   static const String btc = "BTC";
   static const String follow = "Follow";
+  static const String user = "User";
+  static const String favourites = "Favourites";
+  static const String search = "Search";
+  static const String home = "Home";
   static const String darleneRobertson = "Darlene Robertson";
   static const String followers = "125k Followers";
   static const String bestArtist = "Best Artist";
