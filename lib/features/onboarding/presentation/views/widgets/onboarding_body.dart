@@ -1,66 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:high_fidelity/features/onboarding/presentation/views/widgets/dots_and_container_widget.dart';
+import 'package:high_fidelity/features/onboarding/presentation/views/widgets/page_view.dart';
+import 'package:high_fidelity/features/onboarding/presentation/views/widgets/skip_widget.dart';
 
-import '../../../../../core/shared_widgets/custom_text.dart';
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_images.dart';
-import '../../../../../core/utils/app_texts.dart';
-import '../../../data/models/text_model.dart';
-
-class OnboardingBody extends StatelessWidget {
+class OnboardingBody extends StatefulWidget {
   const OnboardingBody({super.key});
 
   @override
+  State<OnboardingBody> createState() => _OnboardingBodyState();
+}
+
+class _OnboardingBodyState extends State<OnboardingBody> {
+  late PageController pageController;
+  int currentPageIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+    pageController.addListener(() {
+      currentPageIndex = pageController.page!.round();
+      setState(() {});
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: [
-        SizedBox(
-          width: double.infinity,
-          child: Image.asset(AppImages.onboardingImage, fit: BoxFit.cover),
-        ),
-        SizedBox(height: 1.h),
-        CustomText(
-          textModel: TextModel(
-            title: AppTexts.discoverCollect,
-            fontWeight: FontWeight.w700,
-            fontSize: 50.sp,
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Column(
           children: [
-            CustomText(
-              textModel: TextModel(
-                title: AppTexts.andSell,
-                fontWeight: FontWeight.w700,
-                fontSize: 50.sp,
-              ),
-            ),
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                CustomText(
-                  textModel: TextModel(
-                    title: AppTexts.nfts,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 50.sp,
-                    textColor: AppColors.lightGreen,
-                  ),
-                ),
-                Image.asset(AppImages.lineMark),
-              ],
+            PageViewOnboarding(pageController: pageController),
+            SizedBox(height: currentPageIndex == 3 ? 111.h : 100.h),
+            DotsAndContainerWidget(
+              currentPageIndex: currentPageIndex,
+              pageController: pageController,
             ),
           ],
         ),
-        SizedBox(height: 10.h),
-        CustomText(
-          textModel: TextModel(
-            title: AppTexts.descOnboarding,
-            textColor: AppColors.lightGrey,
-            fontWeight: FontWeight.w300,
-            fontSize: 24.sp,
-          ),
-        ),
+        SkipWidget(pageController: pageController),
       ],
     );
   }
