@@ -17,7 +17,8 @@ class AppTexts {
   static const String money = "2.23 ETH";
   static const String btc = "BTC";
   static const String watchlist = "Watchlist";
-  static const String descriptionDetail = "Each Apes NFT is a unique masterpiece, and crafted by artists around the globe.";
+  static const String descriptionDetail =
+      "Each Apes NFT is a unique masterpiece, and crafted by artists around the globe.";
   static const String follow = "Follow";
   static const String user = "User";
   static const String price = "Price";
@@ -25,12 +26,16 @@ class AppTexts {
   static const String search = "Search";
   static const String home = "Home";
   static const String items = "Items";
+  static const String activity = "Activity";
+  static const String noActivity = "No Available Activity Now";
+  static const String itemS = "Item’s";
   static const String volume = "Volume";
   static const String floorPrice = "Floor Price";
   static const String description = "Description";
   static const String detail = "Detail";
   static const String collection = "Collection";
   static const String detailCode = "#14415";
+  static const String itemCodeD = "#15315";
   static const String darleneRobertson = "Darlene Robertson";
   static const String followers = "125k Followers";
   static const String sold = "125 Sold";
@@ -38,7 +43,9 @@ class AppTexts {
   static const String placeBid = "Place Bid";
   static const String hypebestApesG = "Hypebest Apes G";
   static const String hypebestApesB = "Hypebest Apes B";
+  static const String hypebestApesD = "Hypebest Apes D";
   static const String highestBidToday = "Highest Bid Today";
   static const String topCollection = "Top Collection 🔥";
-  static const String descOnboarding = "A vibrant marketplace where creators showcase their unique NFTs.";
+  static const String descOnboarding =
+      "A vibrant marketplace where creators showcase their unique NFTs.";
 }

@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:high_fidelity/core/utils/app_colors.dart';
 import 'package:high_fidelity/core/utils/app_images.dart';
 import 'package:high_fidelity/core/utils/app_texts.dart';
+import 'package:high_fidelity/features/favourite/presentation/views/favourite_body.dart';
 import 'package:high_fidelity/features/home/presentation/views/widgets/home_body.dart';
+import 'package:high_fidelity/features/search/presentation/views/search_body.dart';
+import 'package:high_fidelity/features/user/presentation/views/user_body.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,6 +17,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+
+  final List<Widget> screens = [
+    const HomeBody(),
+    const SearchBody(),
+    const FavouriteBody(),
+    const UserBody(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const HomeBody(),
+      body: screens[currentIndex],
     );
   }
 }

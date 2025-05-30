@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:high_fidelity/features/collection/presentation/views/collection_screen.dart';
+import 'package:high_fidelity/features/onboarding/presentation/views/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SafeArea(child: CollectionScreen()),
+          home: SafeArea(child: OnboardingScreen()),
         );
       },
     );

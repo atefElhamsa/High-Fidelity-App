@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:high_fidelity/features/collection/presentation/views/collection_screen.dart';
 import '../../../../../core/shared_widgets/custom_container.dart';
 import '../../../../../core/shared_widgets/custom_text.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -14,11 +15,19 @@ class ListTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      trailing: CustomContainer(
-        containerModel: ContainerModel(
-          title: AppTexts.follow,
-          containerColor: AppColors.lightGreen,
-          textColor: AppColors.white
+      trailing: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const CollectionScreen()),
+          );
+        },
+        child: CustomContainer(
+          containerModel: ContainerModel(
+            title: AppTexts.follow,
+            containerColor: AppColors.lightGreen,
+            textColor: AppColors.white,
+          ),
         ),
       ),
       title: CustomText(
