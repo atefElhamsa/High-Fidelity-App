@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:high_fidelity/features/home/data/models/container_model.dart';
 import '../../features/onboarding/data/models/text_model.dart';
-import '../utils/app_colors.dart';
 import 'custom_text.dart';
 
 class CustomContainer extends StatelessWidget {
@@ -16,14 +15,14 @@ class CustomContainer extends StatelessWidget {
       width: 90.w,
       height: 40.h,
       decoration: ShapeDecoration(
-        color: AppColors.lightGreen,
+        color: containerModel.containerColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
       child: Center(
         child: CustomText(
           textModel: TextModel(
             title: containerModel.title,
-            textColor: AppColors.white,
+            textColor: containerModel.textColor,
             fontWeight: FontWeight.w400,
             fontSize: 18.sp,
           ),

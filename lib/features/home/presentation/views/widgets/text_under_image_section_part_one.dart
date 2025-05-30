@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:high_fidelity/features/home/presentation/views/widgets/custom_access_time.dart';
 
 import '../../../../../core/shared_widgets/custom_text.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -33,19 +34,9 @@ class TextUnderImageSectionPartOne extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Row(
-              children: [
-                Icon(Icons.access_time_rounded, size: 15.sp),
-                SizedBox(width: 10.w),
-                CustomText(
-                  textModel: TextModel(
-                    title: AppTexts.time,
-                    textColor: AppColors.black,
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
+            const CustomAccessTime(
+              textColor: AppColors.black,
+              imageColor: AppColors.black,
             ),
           ],
         ),

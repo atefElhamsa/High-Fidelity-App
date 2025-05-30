@@ -19,13 +19,20 @@ class TextUnderImageSectionPartTwo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomText(
-              textModel: TextModel(
-                title: textUnderImageSectionPartTwoModel.title,
-                textColor: AppColors.lightGrey,
-                fontSize: 15.sp,
-                fontWeight: FontWeight.w500,
+            Padding(
+              padding: EdgeInsets.only(
+                left: textUnderImageSectionPartTwoModel.paddingLeft ?? 0,
+              ),
+              child: CustomText(
+                textModel: TextModel(
+                  title: textUnderImageSectionPartTwoModel.title,
+                  textColor: AppColors.lightGrey,
+                  fontSize:
+                      textUnderImageSectionPartTwoModel.titleSize ?? 15.sp,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
             SizedBox(height: 8.h),
@@ -42,12 +49,21 @@ class TextUnderImageSectionPartTwo extends StatelessWidget {
                   textUnderImageSectionPartTwoModel.priceImage != null
                       ? SizedBox(width: 10.h)
                       : const SizedBox(),
-                  CustomText(
-                    textModel: TextModel(
-                      title: textUnderImageSectionPartTwoModel.price,
-                      textColor: AppColors.black,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: textUnderImageSectionPartTwoModel.paddingLeft ?? 0,
+                    ),
+                    child: CustomText(
+                      textModel: TextModel(
+                        title: textUnderImageSectionPartTwoModel.price,
+                        textColor: AppColors.black,
+                        fontSize:
+                            textUnderImageSectionPartTwoModel.priceSize ??
+                            18.sp,
+                        fontWeight:
+                            textUnderImageSectionPartTwoModel.fontWeight ??
+                            FontWeight.w500,
+                      ),
                     ),
                   ),
                 ],
@@ -56,30 +72,33 @@ class TextUnderImageSectionPartTwo extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        Container(
-          height: 40,
-          width: 125,
-          decoration: BoxDecoration(
-            color: AppColors.black,
-            borderRadius: BorderRadius.circular(40),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                textUnderImageSectionPartTwoModel.containerImage,
-                fit: BoxFit.cover,
-              ),
-              SizedBox(width: 10.w),
-              CustomText(
-                textModel: TextModel(
-                  title: textUnderImageSectionPartTwoModel.containerTitle,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20.sp,
-                  textColor: AppColors.white,
+        GestureDetector(
+          onTap: textUnderImageSectionPartTwoModel.onTap,
+          child: Container(
+            height: textUnderImageSectionPartTwoModel.containerHeight ?? 40,
+            width: textUnderImageSectionPartTwoModel.containerWidth ?? 125,
+            decoration: BoxDecoration(
+              color: AppColors.black,
+              borderRadius: BorderRadius.circular(40),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  textUnderImageSectionPartTwoModel.containerImage,
+                  fit: BoxFit.cover,
                 ),
-              ),
-            ],
+                SizedBox(width: 10.w),
+                CustomText(
+                  textModel: TextModel(
+                    title: textUnderImageSectionPartTwoModel.containerTitle,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20.sp,
+                    textColor: AppColors.white,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

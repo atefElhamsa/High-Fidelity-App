@@ -15,7 +15,11 @@ class ListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       trailing: CustomContainer(
-        containerModel: ContainerModel(title: AppTexts.follow),
+        containerModel: ContainerModel(
+          title: AppTexts.follow,
+          containerColor: AppColors.lightGreen,
+          textColor: AppColors.white
+        ),
       ),
       title: CustomText(
         textModel: TextModel(

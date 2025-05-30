@@ -7,6 +7,7 @@ import 'package:high_fidelity/features/home/presentation/views/widgets/dotted_wi
 import 'package:high_fidelity/features/home/presentation/views/widgets/text_under_image_section_part_one.dart';
 import 'package:high_fidelity/features/home/presentation/views/widgets/text_under_image_section_part_two.dart';
 import '../../../../../core/utils/app_colors.dart';
+import '../../../../detail/presentation/views/detail_screen.dart';
 
 class TextUnderImageSection extends StatelessWidget {
   const TextUnderImageSection({super.key});
@@ -29,7 +30,7 @@ class TextUnderImageSection extends StatelessWidget {
           SizedBox(height: 10.h),
           const DottedWidget(),
           SizedBox(height: 20.h),
-          const TextUnderImageSectionPartTwo(
+          TextUnderImageSectionPartTwo(
             textUnderImageSectionPartTwoModel:
                 TextUnderImageSectionPartTwoModel(
                   title: AppTexts.highestBidToday,
@@ -37,9 +38,16 @@ class TextUnderImageSection extends StatelessWidget {
                   containerTitle: AppTexts.placeBid,
                   containerImage: AppImages.iconText,
                   priceImage: AppImages.iconCost,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DetailScreen(),
+                      ),
+                    );
+                  },
                 ),
           ),
-
         ],
       ),
     );
