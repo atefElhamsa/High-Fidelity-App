@@ -12,21 +12,32 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 90.w,
+      width: containerModel.containerWidth ?? 90.w,
       height: 40.h,
+      padding: EdgeInsets.symmetric(
+        horizontal: containerModel.containerPaddingAndWidth ?? 0,
+      ),
       decoration: ShapeDecoration(
         color: containerModel.containerColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
-      child: Center(
-        child: CustomText(
-          textModel: TextModel(
-            title: containerModel.title,
-            textColor: containerModel.textColor,
-            fontWeight: FontWeight.w400,
-            fontSize: 18.sp,
+      child: Row(
+        mainAxisAlignment:
+            containerModel.mainAxisAlignment ?? MainAxisAlignment.center,
+        children: [
+          containerModel.icon ?? const SizedBox(),
+          SizedBox(width: containerModel.containerPaddingAndWidth ?? 0),
+          Center(
+            child: CustomText(
+              textModel: TextModel(
+                title: containerModel.title,
+                textColor: containerModel.textColor,
+                fontWeight: FontWeight.w400,
+                fontSize: 18.sp,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

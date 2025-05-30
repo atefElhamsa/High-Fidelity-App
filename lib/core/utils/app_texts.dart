@@ -9,10 +9,14 @@ class AppTexts {
   static const String trending = "Trending";
   static const String byArtist = "By Artist";
   static const String etc = "ETH";
+  static const String itemsPrice = "10.0K";
+  static const String floorPriceCount = "13.99";
+  static const String volumePrice = "689.10K";
   static const String endsIn = "Ends in";
   static const String time = "1h 23m 32s";
   static const String money = "2.23 ETH";
   static const String btc = "BTC";
+  static const String watchlist = "Watchlist";
   static const String descriptionDetail = "Each Apes NFT is a unique masterpiece, and crafted by artists around the globe.";
   static const String follow = "Follow";
   static const String user = "User";
@@ -20,8 +24,12 @@ class AppTexts {
   static const String favourites = "Favourites";
   static const String search = "Search";
   static const String home = "Home";
+  static const String items = "Items";
+  static const String volume = "Volume";
+  static const String floorPrice = "Floor Price";
   static const String description = "Description";
   static const String detail = "Detail";
+  static const String collection = "Collection";
   static const String detailCode = "#14415";
   static const String darleneRobertson = "Darlene Robertson";
   static const String followers = "125k Followers";

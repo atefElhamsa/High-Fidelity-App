@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+
 class RowTitleModel {
-  final String title;
+  final Widget widget;
   final String image;
 
-  const RowTitleModel({required this.title, required this.image});
+  const RowTitleModel({required this.widget, required this.image});
 }

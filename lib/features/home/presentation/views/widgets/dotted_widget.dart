@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class DottedWidget extends StatelessWidget {
-  const DottedWidget({super.key});
+  const DottedWidget({super.key, this.direction, this.lineLength});
+  final Axis? direction;
+  final double? lineLength;
 
   @override
   Widget build(BuildContext context) {
-    return const DottedLine(
-      direction: Axis.horizontal,
+    return DottedLine(
+      direction: direction ?? Axis.horizontal,
       alignment: WrapAlignment.center,
-      lineLength: double.infinity,
+      lineLength: lineLength ?? double.infinity,
       lineThickness: 1,
       dashLength: 6,
       dashColor: AppColors.lightGrey,

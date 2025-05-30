@@ -9,6 +9,9 @@ import 'package:high_fidelity/features/home/presentation/views/widgets/list_tile
 import 'package:high_fidelity/features/home/presentation/views/widgets/top_collection_section.dart';
 import 'package:high_fidelity/features/home/presentation/views/widgets/top_text_widget.dart';
 
+import '../../../../../core/shared_widgets/custom_text.dart';
+import '../../../../onboarding/data/models/text_model.dart';
+
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
 
@@ -23,18 +26,30 @@ class HomeBody extends StatelessWidget {
           SizedBox(height: 25.h),
           const ContainersList(),
           SizedBox(height: 25.h),
-          const CustomRowTitle(
+          CustomRowTitle(
             rowTitleModel: RowTitleModel(
-              title: AppTexts.topCollection,
+              widget: CustomText(
+                textModel: TextModel(
+                  title: AppTexts.topCollection,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 25.sp,
+                ),
+              ),
               image: AppImages.menuImage,
             ),
           ),
           SizedBox(height: 20.h),
           const TopCollectionSection(),
           SizedBox(height: 30.h),
-          const CustomRowTitle(
+          CustomRowTitle(
             rowTitleModel: RowTitleModel(
-              title: AppTexts.bestArtist,
+              widget: CustomText(
+                textModel: TextModel(
+                  title: AppTexts.bestArtist,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 25.sp,
+                ),
+              ),
               image: AppImages.menuImage,
             ),
           ),

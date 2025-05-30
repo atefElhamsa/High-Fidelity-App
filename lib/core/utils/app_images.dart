@@ -13,4 +13,6 @@ class AppImages {
   static const String favouriteIcon = "assets/images/favourite_icon.png";
   static const String detailImage = "assets/images/detail_image.png";
   static const String iconDetail = "assets/images/icon_detail.png";
+  static const String banner = "assets/images/banner.png";
+  static const String verify = "assets/images/verify.png";
 }

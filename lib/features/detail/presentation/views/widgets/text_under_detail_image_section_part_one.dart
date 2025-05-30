@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../../core/shared_widgets/custom_container.dart';
 import '../../../../../core/shared_widgets/custom_text.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -31,11 +30,17 @@ class TextUnderDetailImageSectionPartOne extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 25),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: CustomRowTitle(
             rowTitleModel: RowTitleModel(
-              title: AppTexts.hypebestApesB,
+              widget: CustomText(
+                textModel: TextModel(
+                  title: AppTexts.hypebestApesB,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 25.sp,
+                ),
+              ),
               image: AppImages.iconDetail,
             ),
           ),
